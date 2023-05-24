@@ -17,8 +17,9 @@ To write a python program for simulating ARP protocols using TCP.
 5. Map the IP address with its MAC address and return the MAC address to client.
 # PROGRAM :
 # CLIENT :
-# Developed By : kishore.S
-# Register Number : 22008388
+```
+ # Developed By : kishore.S
+ # Register Number : 22008388
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -31,8 +32,9 @@ while True:
         c.send(address[ip].encode())
     except KeyError:
         c.send("Not Found".encode())
+ ```
 # SERVER :
-
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
@@ -40,6 +42,7 @@ while True:
     ip=input("Enter logical Address : ")
     s.send(ip.encode())
     print("MAC Address",s.recv(1024).decode())
+```
 # OUTPUT :
 # SERVER OUTPUT :
 ![image](https://github.com/Kishore2o/EX-4/assets/118679883/ab8a39e8-0070-4d99-bb03-948aaf4ea352)
